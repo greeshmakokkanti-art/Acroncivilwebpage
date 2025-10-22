@@ -1,0 +1,100 @@
+/* Full page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Image background section */
+.image-section {
+  background-image: url('c:/Greeshma/foods.jpg'); /* Local image */
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Video background section */
+.video-section {
+  position: relative;
+  height: 900px;
+  overflow: visible;
+}
+
+.bg-video {
+   position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 500%; 
+  min-height: 300%;
+  
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+
+.video-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.food {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 10s linear infinite;
+    border: 1px solid #000;
+    background-color: rgb(198, 236, 198);
+    padding: 10px;
+    width: 100%;
+}
+
+.food p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes food {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+}

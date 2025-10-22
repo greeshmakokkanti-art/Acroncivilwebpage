@@ -1,0 +1,52 @@
+/* Full page reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Image background section */
+.image-section {
+  background-image: url('c:/Greeshma/foods.jpg'); /* Local image */
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Video background section */
+.video-section {
+  position: relative;
+  height: 500px;
+  overflow: visible;
+}
+
+.bg-video {
+  position: absolute;
+  bottom: 50%;
+  left: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.video-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
