@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px 80px;
+      background: #222;
+      color: white;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      flex: 1 1 100%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex: 2 1 100%;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    .nav-button {
+      background: #00ffcc;
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      flex: 1 1 100%;
+      margin-top: 10px;
+      max-width: 150px;
+      align-self: flex-end;
+    }
+
+    /* Video Section */
+    .video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      margin-top: 150px;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .running-text {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      font-size: 5vw;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .running-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 15s linear infinite;
+    }
+
+    .running-text .primary {
+      color: #00ffcc;
+    }
+
+    .running-text .secondary {
+      color: #fff;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Scrolling Logos */
+    .scrolling-logos {
+      background: #111;
+      padding: 20px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .scrolling-logos img {
+      height: 40px;
+      margin: 0 20px;
+      animation: scrollLogos 20s linear infinite;
+    }
+
+    @keyframes scrollLogos {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Boxes Section */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background: #eee;
+    }
+
+    .box {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    .box p {
+      z-index: 1;
+      font-size: 20px;
+    }
+
+    /* Responsive Navbar */
+    @media (min-width: 768px) {
+      header {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+
+      .logo {
+        flex: 1;
+      }
+
+      nav {
+        flex: 2;
+        margin-top: 0;
+        justify-content: center;
+      }
+
+      .nav-button {
+        flex: 0;
+        margin-top: 0;
+      }
+
+      .video-section {
+        margin-top: 80px;
+      }
+
+      .running-text {
+        font-size: 28px;
+      }
+
+      .scrolling-logos img {
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">MyLogo</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="nav-button">Sign Up</button>
+  </header>
+
+  <!-- Background Video Section -->
+  <section class="video-section">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="running-text">
+      <span>
+        <span class="primary">Welcome to Our Website </span>
+        <span class="secondary"> - Innovative Solutions Ahead! </span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Scrolling Logos -->
+  <section class="scrolling-logos">
+    <img src="https://via.placeholder.com/100x50?text=Logo1" alt="Logo1">
+    <img src="https://via.placeholder.com/100x50?text=Logo2" alt="Logo2">
+    <img src="https://via.placeholder.com/100x50?text=Logo3" alt="Logo3">
+    <img src="https://via.placeholder.com/100x50?text=Logo4" alt="Logo4">
+    <img src="https://via.placeholder.com/100x50?text=Logo5" alt="Logo5">
+  </section>
+
+  <!-- Header Sections as Boxes -->
+  <section class="boxes">
+    <div class="box" style="background-image: url('https://via.placeholder.com/300x200?text=Home');">
+      <p>Home</p>
+    </div>
+    <div class="box" style="background-image: url('https://via.placeholder.com/300x200?text=About');">
+      <p>About</p>
+    </div>
+    <div class="box" style="background-image: url('https://via.placeholder.com/300x200?text=Services');">
+      <p>Services</p>
+    </div>
+    <div class="box" style="background-image: url('https://via.placeholder.com/300x200?text=Contact');">
+      <p>Contact</p>
+    </div>
+  </section>
+
+</body>
+</html>
